@@ -3,7 +3,7 @@ package com.sbur.RESTfulCoffee.Coffees;
 import java.util.UUID;
 
 public class CoffeeModel {
-    private final String id;
+    private String id;
     private String name;
 
     public CoffeeModel(String id, String name) {
@@ -13,6 +13,9 @@ public class CoffeeModel {
 
     public CoffeeModel(String name) {
         this(UUID.randomUUID().toString(), name);
+    }
+
+    public CoffeeModel() {
     }
 
     public String getId() {
@@ -25,5 +28,9 @@ public class CoffeeModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
